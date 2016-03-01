@@ -6,13 +6,11 @@ class Redirector
 {
     private $server = [];
 
-    public function __construct($server)
-    {
+    public function __construct($server) {
         $this->server = $server;
     }
 
-    public function run()
-    {
+    public function run() {
         $url = new Url();
 
         $url->host       = $this->extractHost($this->server['HTTP_HOST']);
